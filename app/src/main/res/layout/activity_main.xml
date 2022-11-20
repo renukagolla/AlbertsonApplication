@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.albertsonapplication.viewModel.SearchViewModel" />
+         <variable
+             name="adapter"
+             type="com.example.albertsonapplication.view.SearchAdapter" />
+        <variable
+            name="noData"
+            type="Boolean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/recycle_border"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            app:title="Acronym Filter"
+            app:titleTextColor="@color/white"
+            android:backgroundTint="#2196F3"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        <EditText
+            android:id="@+id/searchKey"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:drawableRight="@drawable/search"
+            android:hint="Enter Acronym to Search"
+            android:padding="10dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_5"
+            android:background="@drawable/recycle_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="No Data Found"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_18sp"
+                android:textStyle="bold"
+                android:visibility="@{noData?View.VISIBLE:View.GONE}" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecycler"
+                adapter="@{adapter}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

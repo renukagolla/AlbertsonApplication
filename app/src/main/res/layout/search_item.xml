@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="pos"
+            type="Integer" />
+
+<!--        <variable-->
+<!--            name="searchModel"-->
+<!--            type="com.example.albertsonapplication.model.SearchModel" />-->
+     <variable
+            name="lfModel"
+            type="com.example.albertsonapplication.model.MainLfS" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="lf"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/lf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@{lfModel.lf}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+
+<!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Frequency"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/frequency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textStyle="bold"
+                            android:text="@{lfModel.freq}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+-->
+
+<!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Year"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@{lfModel.since}"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+-->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_2"
+                android:background="#7A7A7A" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>
